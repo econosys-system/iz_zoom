@@ -1,0 +1,24 @@
+#iz_zoom_tmpl_02 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: block;
+}
+.relative_container{
+	position: relative;
+}
+#iz_zoom_tmpl_02 img {
+	display: block;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+	border: 20px solid black;
+}
+#iz_zoom_tmpl_02 p {
+	font-size: 13px;
+	height: 16px;
+	position: absolute;
+	bottom: -10px;
+	left: 20px;
+	color: white;
+	overflow: hidden;	
+}

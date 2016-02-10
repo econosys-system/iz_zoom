@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="CSS3, アニメーション, 画像, 拡大, JavaScript, jQuery, テンプレート, ajax, iz_zoom, デモ">
+<meta name="description" content="テンプレートによってカスタマイズ自由な画像拡大表示ライブラリ iz_zoom デモページ">
+<title>CSS3による画像拡大表示ライブラリ iz_zoom デモページ</title>
+
+<link type="text/css" rel="stylesheet" href="css/normalize.css">
+<link type="text/css" rel="stylesheet" href="css/parts.css">
+<link type="text/css" rel="stylesheet" href="css/demo.css">
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+<script type="text/javascript" src="js/jquery.iz_zoom.js"></script>
+<link type="text/css" rel="stylesheet" href="js/iz_zoom_keyframe.css">
+
+<script>
+$(document).ready(function(){
+
+  $('#image1').iz_zoom({
+  	'templatefile' : 'js/iz_zoom/template01.html' ,
+  	'cssfile'      : 'js/iz_zoom/template01.css' ,
+  	'imagefile'    : 'gallery_images/image01_large.jpg' ,
+  	'x'            : 95 ,
+  	'y'            : 40 ,
+  	'relative_id'  : 'image1' ,
+  	'title'        : 'image title '
+  });
+
+
+  $('#image2').iz_zoom({
+  	'templatefile' : 'js/iz_zoom/template02.html' ,
+  	'cssfile'      : 'js/iz_zoom/template02.css' ,
+  	'imagefile'    : 'gallery_images/image02_large.jpg' ,
+    'x'            : -25 ,
+    'y'            : 40 ,
+  	'relative_id'  : 'image2' ,
+  	'title'        : '長い長い日本語のタイトルのテストです'
+  });
+
+  $('#image3').iz_zoom({
+  	'templatefile' : 'js/iz_zoom/template01.html' ,
+  	'cssfile'      : 'js/iz_zoom/template01.css' ,
+  	'imagefile'    : 'gallery_images/image03_large.jpg' ,
+    'x'            : -95 ,
+    'y'            : 40 ,
+  	'relative_id'  : 'image3' ,
+  	'title'        : 'image title '
+  });
+
+  $('#image4').iz_zoom({
+  	'templatefile' : 'js/iz_zoom/template01.html' ,
+  	'cssfile'      : 'js/iz_zoom/template01.css' ,
+  	'imagefile'    : 'gallery_images/image04_large.jpg' ,
+    'x'            : -405 ,
+    'y'            : 40 ,
+  	'relative_id'  : 'image4' ,
+  	'title'        : 'image title '
+  });
+  $('#image5').iz_zoom({
+  	'templatefile' : 'js/iz_zoom/template02.html' ,
+  	'cssfile'      : 'js/iz_zoom/template02.css' ,
+  	'imagefile'    : 'gallery_images/image05_large.jpg' ,
+    'x'            : 95 ,
+  	'y'            : -45 ,
+  	'relative_id'  : 'image5' ,
+  	'title'        : 'スイッチです'
+  });
+  $('#image6').iz_zoom({
+  	'templatefile' : 'js/iz_zoom/template01.html' ,
+  	'cssfile'      : 'js/iz_zoom/template01.css' ,
+  	'imagefile'    : 'gallery_images/image06_large.jpg' ,
+    'x'            : -85 ,
+    'y'            : -45 ,
+  	'relative_id'  : 'image6' ,
+  	'title'        : 'image title '
+  });
+  $('#image7').iz_zoom({
+  	'templatefile' : 'js/iz_zoom/template02.html' ,
+  	'cssfile'      : 'js/iz_zoom/template02.css' ,
+  	'imagefile'    : 'gallery_images/image07_large.jpg' ,
+    'x'            : -255 ,
+    'y'            : -45 ,
+  	'relative_id'  : 'image7' ,
+    'title'        : '「imagefile@2x」指定でretina画像を表示します。'
+  });
+  $('#image8').iz_zoom({
+  	'templatefile' : 'js/iz_zoom/template01.html' ,
+  	'cssfile'      : 'js/iz_zoom/template01.css' ,
+  	'imagefile'    : 'gallery_images/image08_large.jpg' ,
+    'imagefile@2x' : 'gallery_images/image08_large@2x.jpg' ,
+    'x'            : -295 ,
+    'y'            : -45 ,
+  	'relative_id'  : 'image8'
+  });
+
+
+});
+</script>
+
+</head>
+
+<body>
+
+
+
+
+<!-- #wrapper-->
+<div id="wrapper" style="width:650px; margin:0 auto;">
+
+ <!-- #contents-->
+ <div id="contents">
+
+  <!-- iz_zoom_relative_box -->
+  <div id="iz_zoom_relative_box"></div>
+  <!-- /iz_zoom_relative_box -->
+
+   <div class="mt41 mb70 clearfix" ><a href="http://flatsystems.net/econosys_system/iz_zoom.html"><img class="fl" src="images/iz_zoom_logo.gif" width="149" height="20" alt= "iz_zoom" /></a><span id="version" class="fl">Version 3.00</span></div>
+
+   <div class="mystage mb37">
+    <img id="image1" class="animated fadeInRight" src="gallery_images/image01.gif" width="132" height="132">
+    <img id="image2" class="animated fadeInRight" style="animation-delay:0.1s;" src="gallery_images/image02.gif" width="132" height="132" alt= "" />
+    <img id="image3" class="animated fadeInRight" style="animation-delay:0.2s;" src="gallery_images/image03.gif" width="132" height="132" alt= "" />
+    <img id="image4" class="animated fadeInRight" style="animation-delay:0.3s;" src="gallery_images/image04.gif" width="132" height="132" alt= "" />
+    <img id="image5" class="animated fadeInRight" style="animation-delay:0.4s;" src="gallery_images/image05.gif" width="132" height="132" alt= "" />
+    <img id="image6" class="animated fadeInRight" style="animation-delay:0.5s;" src="gallery_images/image06.gif" width="132" height="132" alt= "" />
+    <img id="image7" class="animated fadeInRight" style="animation-delay:0.6s;" src="gallery_images/image07.gif" width="132" height="132" alt= "" />
+    <img id="image8" class="animated fadeInRight" style="animation-delay:0.7s;" src="gallery_images/image08.gif" width="132" height="132" alt= "" />
+   </div>
+
+   <div style="width:650px;" class="mb37">
+
+   </div>
+
+ </div>
+ <!-- /#contents-->
+
+ <!-- #footer-->
+ <div id="footer">
+  <a href="http://code.google.com/p/iz-zoom/downloads/list">Download iz_zoom ( Google Code )</a><br /><br />
+  <a href="http://flatsystems.net/econosys_system/iz_zoom.html">Back to iz_zoom Page</a><br />
+<br />
+<br />
+<br />
+
+
+<h1>How to use iz_zoom</h1>
+<ol class="list pl0">
+<li>Download "iz_zoom" and upload "js Folder" to your server.<br />
+</li>
+<li>
+Add HTML code between &lt;head&gt; and &lt;/head&gt;<br />
+<pre class="source ml0">
+&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/jquery.iz_zoom.js"&gt;&lt;/script&gt;
+&lt;link type="text/css" rel="stylesheet" href="js/iz_zoom_keyframe.css"&gt;
+</pre>
+</li>
+<li>
+Add id="image1"
+<p class="source">
+&lt;img src="thumb.gif"&gt;<br />
+
+&lt;img id="image1" src="thumb.gif"&gt;
+</p>
+</li>
+<li>
+Add JavaScript code like below,<br />
+<pre class="source">
+&lt;script type="text/javascript"&gt;
+$(document).ready(function(){
+  $('#image1').iz_zoom({
+  	'templatefile' : 'js/iz_zoom/template01.html' ,
+  	'cssfile'      : 'js/iz_zoom/template01.css' ,
+  	'imagefile'    : 'gallery_images/image01_large.jpg' ,
+    'imagefile@2x' : 'gallery_images/image01_large@2x.jpg' ,
+  	'x'            : 95 ,
+  	'y'            : 40 ,
+  	'relative_id'  : 'image1' ,
+  	'title'        : 'image title '
+  });
+});
+&lt;/script&gt;
+</pre>
+</li>
+</ol>
+
+
+  <hr size="1" style="border-top:1px solid #ccc;" />
+  <a href="http://econosys-system.com"><img src="images/logo3.gif" class="mt20 fl" /></a><span class="block fr mt20" id="copyright">copyright (c)2002-2016 econosys system</span>
+ </div>
+ <!-- /#footer-->
+
+</div>
+<!-- /#wrapper-->
+
+
+
+
+</body>
+</html>
